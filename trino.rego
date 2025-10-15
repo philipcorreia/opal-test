@@ -25,12 +25,12 @@ deny[msg] {
 deny[msg] {
   data.policies[bc]
   not data.policies[bc]["trino"]
-  msg := sprintf("no policy package at policies.%s.%s", [bc, svc])
+  msg := sprintf("no policy package at policies.%s.%s", [bc, "trino"])
 }
 
 result := {
   "bc":      bc,
-  "service": svc,
+  "service": "trino",
   "allow":   allow,
   "deny":    [m | m := deny[_]],
 }
