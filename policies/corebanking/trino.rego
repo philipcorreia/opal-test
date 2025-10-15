@@ -2,6 +2,8 @@ package policies.corebanking.trino
 
 import future.keywords.if
 
+default allow := false
+
 # Metadata
 table := "corebanking_vault_core_posting_summary__daily"
 schema := "corebanking"
