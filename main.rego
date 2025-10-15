@@ -2,6 +2,8 @@ package main
 
 import rego.v1
 
+default allow = false
+
 applicable_policy := {
     "vm": "compute",
     "lambda": "compute",
@@ -15,7 +17,7 @@ applicable_policy := {
 
 name := applicable_policy[input.resource]
 
-router[policy] := data.policies[name][policy].deny
+router[policy] := data.policies[name][policy].allow
 
 deny contains msg if {
     not name
