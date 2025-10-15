@@ -1,6 +1,6 @@
 package policies.corebanking.trino
 
-default allow = false
+default allow := false
 
 # Metadata
 table := "deposits_vault_core_posting_summary__daily"
@@ -11,7 +11,7 @@ catalog := "gold"
 allowed_users := { "@ikigaidigital/deposits-bc", "michael@ikigaidigital.io" }
 
 # Allow SELECT queries for allowed users
-allow {
+allow if {
   input.action.operation == "SelectFromColumns"
   input.action.resource.table.catalogName == catalog
   input.action.resource.table.schemaName == schema

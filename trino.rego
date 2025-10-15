@@ -5,6 +5,8 @@ bc := lower(input.action.resource.table.schemaName)
 # existence check for a matching policy package
 selected := data.policies[bc]["trino"] { data.policies[bc]["trino"] }
 
+default allow := false
+
 # Allow if the selected package exposes allow == true
 allow {
   selected.allow
