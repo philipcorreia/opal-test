@@ -1,6 +1,6 @@
 package policies.corebanking.trino
 
-default allow := false
+default allow = false
 
 # Metadata
 table := "deposits_vault_core_posting_summary__daily"
