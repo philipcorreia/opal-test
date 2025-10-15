@@ -2,8 +2,6 @@ package policies.corebanking.trino
 
 import future.keywords.if
 
-default allow := false
-
 # Metadata
 table := "deposits_vault_core_posting_summary__daily"
 schema := "deposits"
