@@ -1,5 +1,7 @@
 package policies.corebanking.trino
 
+import future.keywords.if
+
 default allow := false
 
 # Metadata
