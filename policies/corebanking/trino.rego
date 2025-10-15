@@ -17,5 +17,5 @@ allow {
   input.action.resource.table.catalogName == catalog
   input.action.resource.table.schemaName == schema
   input.action.resource.table.tableName == table
-  input.identity.user == allowed_users[_]
+  input.context.identity.user == allowed_users[_]
 }
