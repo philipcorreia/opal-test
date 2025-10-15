@@ -29,6 +29,8 @@ deny contains msg if {
     some msg in policy
 }
 
+allow if count(deny) == 0
+
 decision["allow"] := count(deny) == 0
 decision["reason"] :=  concat(" | ", deny)
 decision["explain"] := router if {
