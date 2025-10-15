@@ -1,4 +1,4 @@
-package policies.corebanking.trino
+package policies.deposits.trino
 
 import future.keywords.if
 
